@@ -3,8 +3,13 @@
 using namespace std;
 
 /*
-    Time Complexity: O(n+m) where n is the length of word1 and m is the length of word2.
-    Space Complexity: O(1)
+    * Given two strings word1 and word2, merge them alternatively to form a new string.
+    
+    * If the lengths of the strings are not equal, append the remaining characters of the longer string at the end.
+    
+    * Time Complexity: O(n + m), where n and m are the lengths of word1 and word2 respectively.
+    
+    * Space Complexity: O(n + m), since we are creating a new string to store the result.
 */
 class Solution {
     public:
