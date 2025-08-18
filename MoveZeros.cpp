@@ -2,9 +2,17 @@
 #include <vector>
 using namespace std;
 
+/*
+    * Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+    
+    * Time Complexity: O(n), where n is the length of the nums array.
+    
+    * Space Complexity: O(1), since we are modifying the array in place.
+*/
+
 class Solution {
     public:
-    void BruteForce(vector<int>& nums) {// Tc O(n^2), Sc O(1)
+    void BruteForce(vector<int>& nums) {
         int i = 0, j = i+1;
 
         while (i < nums.size()-1) {
@@ -22,7 +30,7 @@ class Solution {
         }
     }
 
-    void Optimized(vector<int>& nums) { // Tc O(n), Sc O(1)
+    void Optimized(vector<int>& nums) {
         int snowBallSize = 0;
 
         for(int i=0; i<nums.size(); i++) {
