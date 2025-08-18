@@ -12,19 +12,24 @@ class Solution {
 
         for (char c: s) {
             if (c == ' ' && word.empty()) {
-                continue; // skip leading spaces
+                // skip leading spaces
+                continue;
             } else if (c == ' ') {
-                result.push_back(word); // push the word to result
+                // push the word to result
+                result.push_back(word);
                 word = "";
             } else {
-                word += c; // build the word
+                // build the word
+                word += c;
             }
         }
 
+        // handle the last word
         if (!word.empty()) {
-            result.push_back(word); // push the last word
+            result.push_back(word);
         }
 
+        // reverse the order of words
         for (int i=result.size()-1; i>=0; i--) {
             reverse += result[i];
             if (i != 0) {
