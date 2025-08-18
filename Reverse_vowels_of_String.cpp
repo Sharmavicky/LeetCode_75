@@ -3,6 +3,13 @@
 #include <string>
 using namespace std;
 
+/*
+    Problem: Reverse the vowels of a string.
+    
+    Time Complexity: O(n), where n is the length of the string.
+    Space Complexity: O(1), since we are modifying the string in place.
+*/
+
 class Solution {
     private:
     // Helper function to check if a character is a vowel
@@ -11,13 +18,15 @@ class Solution {
     }
 
     public:
-    string BruteForce(string& s) { // Tc: O(n), Sc: O(1)
+    string BruteForce(string& s) {
         int i=0, j=s.size()-1;
 
-        if (s.empty() || s.size() ==  1) return s; // if string is empty or has only one character
+        // if string is empty or has only one character
+        if (s.empty() || s.size() ==  1) return s;
 
         while (i <= j) {
-            if (isVowel(s[i]) && isVowel(s[j])) {//if both are vowels, swap them
+            // if both pointers are vowels, swap them
+            if (isVowel(s[i]) && isVowel(s[j])) {
                 swap(s[i], s[j]);
                 i++;
                 j--;
