@@ -3,8 +3,11 @@
 using namespace std;
 
 /*
-    Time Complexity: O(n)
-    Space Complexity: O(n)
+    * Given an array of integers representing the number of candies each kid has, and an integer extraCandies, determine if each kid can have the greatest number of candies after receiving the extraCandies.
+
+    * Time Complexity: O(n), where n is the number of kids.
+    
+    * Space Complexity: O(1), since we are using a constant amount of space.
 */
 
 class Solution {
